@@ -7,14 +7,14 @@
 <body>
 <form>
     <table>
-        <tr style="background-color: darkorange"><td colspan="3" style="text-align:center">SỞ THÍCH CỦA BẠN</td></tr>
+        <tr style="background-color: darkorange"><td colspan="3" align="center" ">SỞ THÍCH CỦA BẠN</td></tr>
         <tr>
             <td style="color:blue">Họ và tên</td>
             <td colspan="2"><input type="text" name="Yourname"/></td>
         </tr>
         <tr>
             <td style="color:blue">Email</td>
-            <td colspan="2"><input type="text" name="email"/></td>
+            <td colspan="2"><input type="email" name="email"/></td>
         </tr>
         <tr>
             <td style="color:blue">Sở thích</td>
@@ -44,7 +44,70 @@
             </td>
         </tr>
     </table>
+    <br>
+    <br>
+    <br>
 
+
+
+    <table cellpadding="10" style="background: gold">
+        <tr style="background: aquamarine" >
+            <th style="color: blue" colspan="3" align="left">ĐĂNG KÍ HỌC VIÊN</th>
+        </tr>
+        <tr>
+            <td style="color: blue" align="left">Họ và tên</td>
+            <td><input type="text" name="name"></td>
+            <td>     </td>
+        </tr>
+        <tr>
+            <td style="color: blue" align="left">Ngày sinh</td>
+            <td><input type="date" name="birthday"></td>
+            <td>     </td>
+        </tr>
+        <tr>
+            <td style="color: blue" align="left">Giới tính</td>
+            <td>
+                <input type="radio" name="gender">Nam
+                <input type="radio" name="gender">Nữ
+            </td>
+            <td>     </td>
+        </tr>
+        <tr>
+            <td style="color: blue" align="left">Địa chỉ</td>
+            <td><textarea></textarea></td>
+            <td>     </td>
+        </tr>
+        <tr>
+            <td style="color: blue" align="left">Lớp</td>
+            <td>
+                <select>
+                    <option value="class">-chọn lớp-</option>
+                    <option value="class">10</option>
+                    <option value="class">11</option>
+                    <option value="class">12</option>
+                </select>
+            </td>
+            <td>     </td>
+        </tr>
+        <tr>
+            <td style="color: blue" align="left">Email</td>
+            <td><input type="email" name="email"></td>
+            <td>     </td>
+        </tr>
+        <tr>
+            <td style="color: blue" align="left">Điện thoại</td>
+            <td><input type="text" name="number"></td>
+            <td>     </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" name="submit" value="Đăng kí">
+                <input type="reset" name="reset" value="Nhập lại">
+            </td>
+            <td>     </td>
+        </tr>
+    </table>
 </form>
 </body>
 </html>
