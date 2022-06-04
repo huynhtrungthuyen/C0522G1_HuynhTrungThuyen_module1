@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích và chu vi hình tròn</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Nhập Bán kính:</td>
+            <td><input type="number" id="bankinh"></td>
+            <td>(m)</td>
+        </tr>
+        <tr>
+            <td colspan="3"><button onclick="add()">Click</button></td>
+        </tr>
+        <tr>
+            <th align="Left">Diện tích:</th>
+            <td id="dientich"></td>
+            <td>(m<sup>2</sup>)</td>
+        </tr>
+        <tr>
+            <th align="Left">Chu vi:</th>
+            <td id="chuvi"></td>
+            <td>(m)</td>
+        </tr>
+    </table>
+    <script>
+        function add() {
+            let r = document.getElementById("bankinh").value;
+            let s = 3.14*parseInt(r)*parseInt(r);
+            document.getElementById("dientich").innerText = s;
+            let c = 2*3.14*parseInt(r);
+            document.getElementById("chuvi").innerText = c;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính điểm TB và tính Tổng</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Điểm Vật lý:</td>
+            <td><input type="number" id="ly"></td>
+        </tr>
+        <tr>
+            <td>Điểm Hóa học:</td>
+            <td><input type="number" id="hoa"></td>
+        </tr>
+        <tr>
+            <td>Điểm Sinh hoc:</td>
+            <td><input type="number" id="sinh"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button onclick="add()">Kết quả</button> </td>
+        </tr>
+        <tr>
+            <th align="left">Tổng:</th>
+            <td id="tong"></td>
+        </tr>
+        <tr>
+            <th align="left">Điểm Trung bình:</th>
+            <td id="tb"></td>
+        </tr>
+    </table>
+    <script>
+        function add() {
+            let a = document.getElementById("ly").value;
+            console.log(a);
+            let b = document.getElementById("hoa").value;
+            console.log(b);
+            let c = document.getElementById("sinh").value;
+            console.log(c);
+            let s = parseInt(a) + parseInt(b) + parseInt(c);
+            document.getElementById("tong").innerText = s;
+            let t = s / 3;
+            document.getElementById("tb").innerText = t;
+        }
+    </script>
+</body>
+</html>
