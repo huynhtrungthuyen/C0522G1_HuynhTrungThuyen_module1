@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+    <h2>Caculator</h2>
+    <input type="number" id="num1" placeholder="Input Number 1">
+    <input type="number" id="num2" placeholder="Input Number 2">
+    <br><br>
+    <button onclick="add()">Addition(+)</button>
+    <button onclick="Sub()">Subtraction(-)</button>
+    <button onclick="mul()">Multiplication(X)</button>
+    <button onclick="div()">Division(/)</button>
+    <br><br>
+    <div id="result"><b>RESULT</b></div>
+    <script>
+        function add() {
+            let a = document.getElementById("num1").value;
+            let b = document.getElementById("num2").value;
+            let r = parseInt(a) + parseInt(b);
+            document.getElementById("result").innerHTML = "<b>Result Addition: </b>" + r;
+        }
+        function Sub() {
+            let a = document.getElementById("num1").value;
+            let b = document.getElementById("num2").value;
+            let r = parseInt(a) - parseInt(b);
+            document.getElementById("result").innerHTML = "<b>Result Subtraction: </b>" + r;
+        }
+        function mul() {
+            let a = document.getElementById("num1").value;
+            let b = document.getElementById("num2").value;
+            let r = parseInt(a)*parseInt(b);
+            document.getElementById("result").innerHTML = "<b>Result Multiplication: </b>" + r;
+        }
+        function div() {
+            let a = document.getElementById("num1").value;
+            let b = document.getElementById("num2").value;
+            let r = parseInt(a)/parseInt(b);
+            document.getElementById("result").innerHTML = "<b>Result Division: </b>" + r;
+        }
+    </script>
+</body>
+</html>

@@ -19,7 +19,7 @@
             <td><input type="number" id="sinh"></td>
         </tr>
         <tr>
-            <td colspan="2"><button onclick="add()">Kết quả</button> </td>
+            <td colspan="2"><button onclick="add()">Kết quả</button></td>
         </tr>
         <tr>
             <th align="left">Tổng:</th>
@@ -33,14 +33,11 @@
     <script>
         function add() {
             let a = document.getElementById("ly").value;
-            console.log(a);
             let b = document.getElementById("hoa").value;
-            console.log(b);
             let c = document.getElementById("sinh").value;
-            console.log(c);
             let s = parseInt(a) + parseInt(b) + parseInt(c);
             document.getElementById("tong").innerText = s;
-            let t = s / 3;
+            let t = s/3;
             document.getElementById("tb").innerText = t;
         }
     </script>
