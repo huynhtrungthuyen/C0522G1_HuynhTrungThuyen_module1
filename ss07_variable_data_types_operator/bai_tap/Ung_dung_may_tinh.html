@@ -19,25 +19,25 @@
         function add() {
             let a = document.getElementById("num1").value;
             let b = document.getElementById("num2").value;
-            let r = parseInt(a) + parseInt(b);
+            let r = a + b;
             document.getElementById("result").innerHTML = "<b>Result Addition: </b>" + r;
         }
         function Sub() {
             let a = document.getElementById("num1").value;
             let b = document.getElementById("num2").value;
-            let r = parseInt(a) - parseInt(b);
+            let r = parseFloat(a) - parseFloat(b);
             document.getElementById("result").innerHTML = "<b>Result Subtraction: </b>" + r;
         }
         function mul() {
             let a = document.getElementById("num1").value;
             let b = document.getElementById("num2").value;
-            let r = parseInt(a)*parseInt(b);
+            let r = parseFloat(a) * parseFloat(b);
             document.getElementById("result").innerHTML = "<b>Result Multiplication: </b>" + r;
         }
         function div() {
             let a = document.getElementById("num1").value;
             let b = document.getElementById("num2").value;
-            let r = parseInt(a)/parseInt(b);
+            let r = parseFloat(a) / parseFloat(b);
             document.getElementById("result").innerHTML = "<b>Result Division: </b>" + r;
         }
     </script>
