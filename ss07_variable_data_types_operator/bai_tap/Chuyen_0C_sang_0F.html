@@ -19,9 +19,9 @@
     </table>
     <script>
         function add() {
-            let c = document.getElementById("cel").value;
-            let f = parseInt(c) * 9 / 5 + 32;
-            document.getElementById("fah").innerText = f;
+            let celsius = document.getElementById("cel").value;
+            let fahrenheit = parseFloat(celsius) * 9 / 5 + 32;
+            document.getElementById("fah").innerText = fahrenheit;
         }
     </script>
 </body>

@@ -27,11 +27,11 @@
     </table>
     <script>
         function add() {
-            let r = document.getElementById("bankinh").value;
-            let s = 3.14*parseInt(r)*parseInt(r);
-            document.getElementById("dientich").innerText = s;
-            let c = 2*3.14*parseInt(r);
-            document.getElementById("chuvi").innerText = c;
+            let radius = document.getElementById("bankinh").value;
+            let aria = 3.14*parseFloat(radius)*parseFloat(radius);
+            document.getElementById("dientich").innerText = aria;
+            let perimeter = 2*3.14*parseFloat(radius);
+            document.getElementById("chuvi").innerText = perimeter;
         }
     </script>
 </body>

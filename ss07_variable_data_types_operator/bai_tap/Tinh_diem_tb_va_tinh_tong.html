@@ -32,13 +32,13 @@
     </table>
     <script>
         function add() {
-            let a = document.getElementById("ly").value;
-            let b = document.getElementById("hoa").value;
-            let c = document.getElementById("sinh").value;
-            let s = parseInt(a) + parseInt(b) + parseInt(c);
-            document.getElementById("tong").innerText = s;
-            let t = s/3;
-            document.getElementById("tb").innerText = t;
+            let physics = document.getElementById("ly").value;
+            let chemystry = document.getElementById("hoa").value;
+            let biology = document.getElementById("sinh").value;
+            let total = parseFloat(physics) + parseFloat(chemystry) + parseFloat(biology);
+            document.getElementById("tong").innerText = total;
+            let average = total/3;
+            document.getElementById("tb").innerText = average;
         }
     </script>
 </body>
