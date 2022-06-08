@@ -28,9 +28,9 @@
     <script>
         function add() {
             let radius = document.getElementById("bankinh").value;
-            let aria = 3.14*parseFloat(radius)*parseFloat(radius);
-            document.getElementById("dientich").innerText = aria;
-            let perimeter = 2*3.14*parseFloat(radius);
+            let area = Math.PI*parseFloat(radius)*parseFloat(radius);
+            document.getElementById("dientich").innerText = area;
+            let perimeter = 2*Math.PI*parseFloat(radius);
             document.getElementById("chuvi").innerText = perimeter;
         }
     </script>

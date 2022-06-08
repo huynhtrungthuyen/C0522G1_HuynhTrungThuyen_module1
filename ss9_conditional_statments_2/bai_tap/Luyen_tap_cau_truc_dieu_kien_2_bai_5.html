@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện tích tam giác</title>
+</head>
+<body>
+    <script>
+        let egde1 = parseFloat(prompt("Nhập cạnh thứ nhất (m): "));
+        let egde2 = parseFloat(prompt("Nhập cạnh thứ 2 (m): "));
+        if (egde1%egde1==0 && egde1>0 && egde2%egde2==0 && egde2>0) {
+            alert("Diện tích hình chữ nhật: " + egde1*egde2/2 + " (m2)")
+        }
+        else {
+            alert("Nhập lại!")
+        }
+    </script>
+</body>
+</html>

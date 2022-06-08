@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích hình vuông</title>
+</head>
+<body>
+    <script>
+        let squareEdge = parseFloat(prompt("Nhập cạnh hình vuông: "));
+        if (squareEdge%squareEdge == 0 && squareEdge>0) {
+            alert("Diện tích hình vuông: " + squareEdge*squareEdge)
+        }
+        else {
+            alert("Nhập lại!")
+        }
+    </script>
+</body>
+</html>

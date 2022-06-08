@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính hoa hồng</title>
+</head>
+<body>
+    <p id="rose">Hoa hồng?</p>
+    <script>
+        let sales = parseFloat(prompt("Nhập doánh số bán hàng (triệu VND): "));
+        if (sales>300) {
+            document.getElementById("rose").innerHTML = "Hoa hồng 20% = " + sales*20/100 + " (triệu VND)"
+        }
+        else
+            if (sales>100) {
+                document.getElementById("rose").innerHTML = "Hoa hồng 10% = " + sales*10/100 + " (triệu VND)"
+            }
+            else {
+                document.getElementById("rose").innerHTML = "Hoa hồng 5% = " + sales*5/100 + " (triệu VND)"
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng học lực</title>
+</head>
+<body>
+    <script>
+        let testMouth = parseFloat(prompt("Nhập điểm kiểm tra miệng: "));
+        let test15Minutes = parseFloat(prompt("Nhập điểm kiểm tra 15': "));
+        let testMidTerm = parseFloat(prompt("Nhập điểm kiểm tra giữa kì: "));
+        let testFinal = parseFloat(prompt("Nhập điểm kiểm tra cuối kì: "));
+        let finalGrade = (testMouth + test15Minutes + testMidTerm*2 + testFinal*3)/7;
+        alert("Điểm tổng kết là: " + finalGrade)
+        if (finalGrade<5) {
+            document.write("Xếp loại YẾU");
+        }
+        else
+            if (finalGrade<6.5) {
+                document.write("Xếp loại TRUNG BÌNH");
+            }
+            else
+                if (finalGrade<8) {
+                    document.write("Xếp loại KHÁ");
+                }
+                else {
+                    document.write("Xếp loại GIỎI")
+                }
+    </script>
+</body>
+</html>

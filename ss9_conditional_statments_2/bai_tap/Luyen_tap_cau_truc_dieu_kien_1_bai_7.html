@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính cước điện thoại</title>
+</head>
+<body>
+<p id="phone">Kết quả</p>
+<script>
+    /**
+     *Phí thuê bao bắt buộc là 25 nghìn.
+     600 đồng cho mỗi phút gọi của 50 phút đầu tiên.
+     400 đồng cho mỗi phút gọi của 150 phút tiếp theo.
+     200 đồng cho bất kỳ mỗi phút nào sau 200 phút đầu tiên.
+     */
+    let minutes = parseFloat(prompt("Nhập số phút đã sử dụng: "));
+    let phoneCharges;
+    if (minutes>200) {
+        phoneCharges = (minutes-200)*200 + 150*400 + 600*50 + 25000;
+    }
+    else
+        if (minutes>50) {
+            phoneCharges = (minutes-50)*400 + 600*50 + 25000;
+        }
+        else {
+            phoneCharges = minutes*600 + 25000;
+        }
+    document.getElementById("phone").innerHTML = "Tiền cước điện thoại là " + phoneCharges + " (VND)"
+</script>
+</body>
+</html>
