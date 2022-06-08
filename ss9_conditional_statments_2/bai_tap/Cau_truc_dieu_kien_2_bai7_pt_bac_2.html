@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phương trình bậc 2</title>
+</head>
+<body>
+    <script>
+        let numberA = parseFloat(prompt("Nhập hệ số a: "));
+        let numberB = parseFloat(prompt("Nhập hệ số b: "));
+        let numberC = parseFloat(prompt("Nhập hệ số c: "));
+        let delta = numberB*numberB - 4*numberA*numberC;
+        if (delta<0) {
+            alert("Phương trình vô nghiệm!");
+        }
+        else
+            if (delta==0) {
+                alert("Phương trình có nghiệm kép x1 = x2 = " + (-numberB/(2*numberA)));
+            }
+            else {
+                alert("Phương trình có 2 nghiệm phân biệt là x1 = " + (-numberB+Math.sqrt(delta))/(2*numberA) + " và x2 = " + (-numberB-Math.sqrt(delta))/(2*numberA));
+            }
+    </script>
+</body>
+</html>

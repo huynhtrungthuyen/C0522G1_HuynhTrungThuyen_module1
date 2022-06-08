@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giá điện</title>
+</head>
+<body>
+    <script>
+        /**
+         * 100 kWh đầu giá 1000, từ kWh 101 – 150 giá 1200, từ kWh 151 – 200 giá 2000, từ 201 trở lên giá 2500.
+         * */
+        let electric = parseFloat(prompt("Nhập chỉ số điện (kWh): "));
+        if (electric%electric==0 && electric>0) {
+            if (electric>200) {
+                alert("Tiền điện: " + ((electric-200)*2500 + 50*2000 + 50*1200 + 100*1000) + " (VND)");
+            }
+            else {
+                if (electric>150) {
+                    alert("Tiền điện: " + ((electric-150)*2000 + 50*1200 + 100*1000) + " (VND)");
+                }
+                else {
+                    if (electric>100) {
+                        alert("Tiền điện: " + ((electric-100)*1200 + 100*1000) + " (VND)");
+                    }
+                    else {
+                        alert("Tiền điện: " + (electric*1000) + " (VND)");
+                    }
+                }
+            }
+        }
+        else {
+            alert("Nhập lại!");
+        }
+    </script>
+</body>
+</html>

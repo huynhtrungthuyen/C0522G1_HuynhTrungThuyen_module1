@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra cạnh của tam giác</title>
+</head>
+<body>
+    <script>
+        let edgeA = parseFloat(prompt("Nhập cạnh a: "));
+        let edgeB = parseFloat(prompt("Nhập cạnh b: "));
+        let edgeC = parseFloat(prompt("Nhập cạnh c: "));
+        if (edgeA%edgeA==0 && edgeB%edgeB==0 && edgeC%edgeC==0 && edgeA>0 && edgeB>0 && edgeC>0) {
+            if (edgeA+edgeB>edgeC && edgeC+edgeB>edgeA && edgeA+edgeC>edgeB) {
+                alert("a,b,c là 3 cạnh của một tam giác!");
+            }
+            else {
+                alert("a,b,c không phải là 3 cạnh của một tam giác!");
+            }
+        }
+        else {
+            alert("Nhập lại!");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra tuổi của học sinh</title>
+</head>
+<body>
+    <script>
+        let ageStudent = parseFloat(prompt("Nhập tuổi của học sinh: "));
+        if (ageStudent%1==0 && ageStudent>0) {
+            if (ageStudent < 15) {
+                document.write("Chưa đủ tuổi vào lớp 10");
+            } else {
+                document.write("Đủ tuổi vào lớp 10");
+            }
+        }
+        else {
+            document.write("Nhập lại!");
+        }
+    </script>
+</body>
+</html>

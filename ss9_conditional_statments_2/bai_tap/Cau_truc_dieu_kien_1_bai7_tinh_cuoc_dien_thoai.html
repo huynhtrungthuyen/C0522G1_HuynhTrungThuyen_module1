@@ -15,17 +15,19 @@
      */
     let minutes = parseFloat(prompt("Nhập số phút đã sử dụng: "));
     let phoneCharges;
-    if (minutes>200) {
-        phoneCharges = (minutes-200)*200 + 150*400 + 600*50 + 25000;
+    if ((minutes%minutes==0 || minutes==0) && minutes>=0) {
+        if (minutes > 200) {
+            phoneCharges = (minutes - 200) * 200 + 150 * 400 + 600 * 50 + 25000;
+        } else if (minutes > 50) {
+            phoneCharges = (minutes - 50) * 400 + 600 * 50 + 25000;
+        } else {
+            phoneCharges = minutes * 600 + 25000;
+        }
+        document.getElementById("phone").innerHTML = "Tiền cước điện thoại là " + phoneCharges + " (VND)";
     }
-    else
-        if (minutes>50) {
-            phoneCharges = (minutes-50)*400 + 600*50 + 25000;
-        }
-        else {
-            phoneCharges = minutes*600 + 25000;
-        }
-    document.getElementById("phone").innerHTML = "Tiền cước điện thoại là " + phoneCharges + " (VND)"
+    else {
+        document.getElementById("phone").innerText = "Nhập lại!";
+    }
 </script>
 </body>
 </html>
