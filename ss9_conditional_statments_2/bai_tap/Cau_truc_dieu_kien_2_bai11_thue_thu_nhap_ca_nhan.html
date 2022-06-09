@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính thuế thu nhập cá nhân</title>
+</head>
+<body>
+<p id="tax">Thuế thu nhập cá nhân?</p>
+<script>
+    let salary = parseFloat(prompt("Nhập tiền lương (triệu VND): "));
+    if ((salary%salary==0 || salary==0) && salary>=0) {
+        if (salary > 15) {
+            document.getElementById("tax").innerHTML = "Thuế 30% = " + salary*30/100 + " (triệu VND)";
+        } else if (salary > 7) {
+            document.getElementById("tax").innerHTML = "Thuế 20% = " + salary*20/100 + " (triệu VND)";
+        } else {
+            document.getElementById("tax").innerHTML = "Thuế 10% = " + salary*10/100 + " (triệu VND)";
+        }
+    }
+    else {
+        document.getElementById("tax").innerText = "Nhập lại!";
+    }
+</script>
+</body>
+</html>

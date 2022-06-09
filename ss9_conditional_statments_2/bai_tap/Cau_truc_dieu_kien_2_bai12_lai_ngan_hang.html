@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lãi suất ngân hàng</title>
+</head>
+<body>
+    <script>
+        let money = parseFloat(prompt("Nhập số tiền gửi ngân hàng ban đầu (VND): "));
+        let month = parseFloat(prompt("Nhập số tháng gửi ngân hàng (VND): "));
+        if (month<6) {
+            alert("Lãi suất 0,4%/tháng, tổng lãi là " + month*money*0.4/100 + " (VND)");
+        }
+        else
+            if (month<12) {
+                alert("Lãi suất 0,5%/tháng, tổng lãi là " + month*money*0.5/100 + " (VND)");
+            }
+            else {
+                alert("Lãi suất 0,6%/tháng, tổng lãi là " + month*money*0.6/100 + " (VND)");
+            }
+    </script>
+</body>
+</html>
