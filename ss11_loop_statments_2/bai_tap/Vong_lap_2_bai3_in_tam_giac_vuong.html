@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3>Hình 1:</h3>
+    <script>
+        for (let i = 1; i<=5; i++) {
+            for (let j = 1; j<=i; j++) {
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+    </script>
+
+
+    <br><h3>Hình 2:</h3>
+    <script>
+        for (let i = 1; i<=5; i++) {
+            // for (let j = 5; j>=i; j--) {
+            for (let j = 1; j<=6-i; j++) {
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+    </script>
+
+
+    <br><h3>Hình 3:</h3>
+    <script>
+        // for (let i = 1; i<=5; i++) {
+        //     for (let j = 1; j<=5; j++) {
+        //         if (j<6-i) {
+        //             document.write(&nbsp);
+        //             continue;
+        //         }
+        //         document.write("*");
+        //     }
+        //     document.write("<br>");
+        // }
+        let triangle = "<table>";
+        for (let i=1; i<=5; i++) {
+            triangle += "<tr>";
+            for (let j=1; j<=5; j++) {
+                if (j<=5-i) {
+                    triangle += "<td>" + "</td>";
+                }
+                else {
+                    triangle += "<td>" + "*" + "</td>";
+                }
+            }
+            triangle += "</tr>";
+        }
+        triangle += "</table>";
+        document.write(triangle);
+    </script>
+
+
+    <br><h3>Hình 4:</h3>
+    <script>
+        let triangle4 = "<table>";
+        for (let i=1; i<=5; i++) {
+            triangle4 += "<tr>";
+            for (let j=1; j<=5; j++) {
+                if (j<i) {
+                    triangle4 += "<td>" + "</td>";
+                }
+                else {
+                    triangle4 += "<td>" + "*" + "</td>";
+                }
+            }
+            triangle4 += "</tr>";
+        }
+        triangle4 += "</table>";
+        document.write(triangle4);
+    </script>
+</body>
+</html>
