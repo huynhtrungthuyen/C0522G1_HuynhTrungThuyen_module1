@@ -12,19 +12,9 @@
         let result = 0;
         for (let i=1; i<=month; i++) {
             result += money*interest/100;
-            money=result;
+            money += result;
         }
         document.write("Số tiền lãi sau " + month + " tháng cho vay là: " + result + " (VND)");
     </script>
-<!--    <script>-->
-<!--        let money = parseFloat(prompt("Số tiền ban đầu (VND): "));-->
-<!--        let month = parseInt(prompt("Số tháng cho vay: "));-->
-<!--        let interest = parseFloat(prompt("Lãi suất hàng tháng (%): "));-->
-<!--        let result = money*interest/100;-->
-<!--        for (let i=2; i<=month; i++) {-->
-<!--            result += result*interest/100;-->
-<!--        }-->
-<!--        document.write("Số tiền lãi sau " + month + " tháng cho vay là: " + result + " (VND)");-->
-<!--    </script>-->
 </body>
 </html>

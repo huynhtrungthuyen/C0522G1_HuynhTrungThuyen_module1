@@ -19,13 +19,17 @@
                 if (count == 4) {
                     alert("Bạn đã hết 3 lần đoán!");
                     break;
-                } else if (number > randomNumber) {
-                    alert("Số bạn nhập lớn hơn số cần đoán!");
-                } else if (number < randomNumber) {
-                    alert("Số bạn nhập nhỏ hơn số cần đoán!");
-                } else {
-                    alert("CHÚC MỪNG!! :))");
-                }
+                } else
+                    if (number > randomNumber) {
+                        alert("Số bạn nhập lớn hơn số cần đoán!");
+                    }
+                    else
+                        if (number < randomNumber) {
+                            alert("Số bạn nhập nhỏ hơn số cần đoán!");
+                        }
+                        else {
+                            alert("CHÚC MỪNG!! :))");
+                        }
             } while (number != randomNumber);
         }
     </script>

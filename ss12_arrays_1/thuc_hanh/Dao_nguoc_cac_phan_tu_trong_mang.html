@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--    <script>-->
+<!--        let array = [-3, 5, 1, 3, 2, 10];-->
+<!--        let first = 0;-->
+<!--        let last = array.length - 1;-->
+<!--        while (first < last) {-->
+<!--            let change = array[first];-->
+<!--            array[first] = array[last];-->
+<!--            array[last] = change;-->
+<!--            first++;-->
+<!--            last&#45;&#45;;-->
+<!--        }-->
+<!--        document.write(array);-->
+<!--    </script>-->
+    <script>
+        let array = [-3, 5, 1, 3, 2, 10];
+        for (let i=array.length-2; i>=0; i--) {
+            array.push(array[i]);
+            array.splice(i, 1);
+        }
+        document.write(array);
+    </script>
+</body>
+</html>
