@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label>Nhập từ:</label>
+    <input type="text" id="englishId">
+    <button type="button" onclick="trans()">Dịch</button>
+    <p id="result">Kết quả</p>
+    <script>
+        function trans() {
+            let arrayEng = ["apple", "banana", "orange", "lemon", "tomato", "potato"];
+            let arrayVie = ["táo", "chuối", "cam", "chanh", "cà chua", "khoai tây"];
+            let english = document.getElementById("englishId").value;
+            let vietnamese;
+            for (let i = 0; i < arrayEng.length; i++) {
+                if (english === arrayEng[i]) {
+                    for (let j = 0; j < arrayVie.length; j++) {
+                        if (j === i) {
+                            vietnamese = arrayVie[j];
+                        }
+                    }
+                }
+            }
+            document.getElementById("result").innerHTML = "<b>" + vietnamese;
+        }
+    </script>
+</body>
+</html>
