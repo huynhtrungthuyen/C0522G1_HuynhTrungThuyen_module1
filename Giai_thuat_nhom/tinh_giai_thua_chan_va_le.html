@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let number = parseInt(prompt("Nhập n: "));
+        let factorial = 1;
+        let result = 1;
+        if (number%2==0) {
+            for (let i=2; i<=number; i+=2) {
+                for (let j=1; j<=i; j++) {
+                    factorial *= j;
+                }
+                result *= factorial;
+            }
+        }
+        else {
+            for (let i=1; i<=number; i+=2) {
+                for (let j = 1; j <= i; j++) {
+                    factorial *= j;
+                }
+                result *= factorial;
+            }
+        }
+        document.write("n!! = " + result);
+    </script>
+</body>
+</html>

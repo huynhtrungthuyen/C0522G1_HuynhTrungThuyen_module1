@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let numberA = parseInt(prompt("Nhập số nguyên dương a: "));
+        let numberB = parseInt(prompt("Nhập số nguyên dương b: "));
+        for (let i=numberA; i>=1; i--) {
+            if (numberA % i === 0 && numberB % i === 0) {
+                document.write("UCLN là " + i + "<br>");
+                break;
+            }
+        }
+        for (let i=numberA; i<=100; i++) {
+            if (i % numberA === 0 && i % numberB === 0) {
+                document.write("BCNN là " + i);
+                break;
+            }
+        }
+    </script>
+</body>
+</html>

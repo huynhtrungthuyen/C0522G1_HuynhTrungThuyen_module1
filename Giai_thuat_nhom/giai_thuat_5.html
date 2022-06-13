@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let number = parseInt(prompt("Nhập n: "));
+        let factorial = 1;
+        let sum = 0;
+        for (let i=1; i<=2*number-1; i+=2) {
+            factorial *= i;
+            sum += 1/factorial;
+        }
+        alert("Tống của dãy số là " + sum);
+    </script>
+</body>
+</html>
