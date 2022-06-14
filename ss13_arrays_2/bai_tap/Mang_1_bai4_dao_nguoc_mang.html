@@ -6,7 +6,12 @@
 </head>
 <body>
     <script>
-        let array = [-3, 5, 1, 3, 2, 10];
+        let number = parseInt(prompt("Nhập số phần tử của mảng "));
+        let array = [];
+        for (let i=0; i<number; i++) {
+            array[i] = parseInt(prompt("Nhập số nguyên N" + i));
+        }
+        alert("array = [" + array + "]");
         let first = 0;
         let last = array.length - 1;
         while (first < last) {
@@ -16,15 +21,7 @@
             first++;
             last--;
         }
-        document.write(array);
+        document.write("Mảng sau khi đảo ngược các phần tử: array = [" + array + "]");
     </script>
-<!--    <script>-->
-<!--        let array = [-3, 5, 1, 3, 2, 10];-->
-<!--        for (let i=array.length-2; i>=0; i&#45;&#45;) {-->
-<!--            array.push(array[i]);-->
-<!--            array.splice(i, 1);-->
-<!--        }-->
-<!--        document.write(array);-->
-<!--    </script>-->
 </body>
 </html>
