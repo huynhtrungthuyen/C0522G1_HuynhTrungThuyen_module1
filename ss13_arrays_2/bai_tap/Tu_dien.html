@@ -17,11 +17,7 @@
             let vietnamese;
             for (let i = 0; i < arrayEng.length; i++) {
                 if (english === arrayEng[i]) {
-                    for (let j = 0; j < arrayVie.length; j++) {
-                        if (j === i) {
-                            vietnamese = arrayVie[j];
-                        }
-                    }
+                    vietnamese = arrayVie[i];
                 }
             }
             document.getElementById("result").innerHTML = "<b>" + vietnamese;

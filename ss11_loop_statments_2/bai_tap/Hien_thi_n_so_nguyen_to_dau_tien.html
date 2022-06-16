@@ -12,11 +12,11 @@
         for (let i=2; i<10000; i++) {
             if (countPrime<number) {
                 for (let j=1; j<=i; j++) {
-                    if (i%j==0) {
+                    if (i%j===0) {
                         countDivisor += 1;
                     }
                 }
-                if (countDivisor==2) {
+                if (countDivisor===2) {
                     document.write(i + " (số thứ " + (countPrime+1) + ")" + "<br>");
                     countPrime += 1;
                 }

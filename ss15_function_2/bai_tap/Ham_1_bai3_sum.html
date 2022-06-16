@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function sum(a,b) {
+            let total;
+            if (a>b) {
+                alert(a + " > " + b);
+            }
+            else {
+                total = a + b;
+                alert("Tổng của 2 số là " + total);
+            }
+        }
+        let numberA = parseFloat(prompt("Nhập số thứ nhất: "));
+        let numberB = parseFloat(prompt("Nhập số thứ hai: "));
+        sum(numberA, numberB);
+    </script>
+</body>
+</html>
