@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function checkNumber(character) {
+            if (parseFloat(character) || character==0) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        let character = prompt("Nhập kí tự bất kì: ");
+        document.write(checkNumber(character));
+    </script>
+</body>
+</html>

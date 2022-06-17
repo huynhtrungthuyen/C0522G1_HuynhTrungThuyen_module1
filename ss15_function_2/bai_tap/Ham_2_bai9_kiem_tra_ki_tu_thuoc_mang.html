@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let array = ["t", "h", "u", "y", "e", "n", "t", "t", "h", ];
+        function checkNumber(character) {
+            let index = 0;
+            for (let i=0; i<array.length; i++) {
+                if (character===array[i]) {
+                    index++;
+                }
+            }
+            if (index===0) {
+                return -1;
+            }
+            else {
+                return index;
+            }
+        }
+        let character = prompt("Nhập kí tự cần kiểm tra: ");
+        document.write(checkNumber(character));
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function swap(array) {
+            let change = array[0];
+            array[0] = array[1];
+            array[1] = change;
+            return array;
+        }
+        let numberA = parseInt(prompt("Nhập số nguyên thứ nhất: "));
+        let numberB = parseInt(prompt("Nhập số nguyên thứ hai: "));
+        let array = [numberA, numberB];
+        alert("Trước khi đổi chỗ: " + array);
+        alert("Sau khi đổi chỗ: " + swap(array));
+    </script>
+</body>
+</html>
