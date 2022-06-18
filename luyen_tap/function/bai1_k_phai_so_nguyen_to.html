@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function displayNotPrime(number) {
+            let index = 1;
+            let result = 0 + "<br>";
+            while (index <= number) {
+                let divisor = 0;
+                for (let i=1; i<=index; i++) {
+                    if (index % i === 0) {
+                        divisor++;
+                    }
+                }
+                if (divisor !== 2) {
+                    result += index + "<br>";
+                }
+                index++;
+            }
+            return result;
+        }
+        let number = parseInt(prompt("Nhập số nguyên dương bất kì: "));
+        document.write(displayNotPrime(number));
+    </script>
+</body>
+</html>

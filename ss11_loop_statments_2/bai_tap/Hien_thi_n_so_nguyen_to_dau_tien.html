@@ -6,25 +6,41 @@
 </head>
 <body>
     <script>
+        // let number = parseInt(prompt("Nhập n số nguyên tố đầu tiên: "));
+        // let countPrime = 0;
+        // let countDivisor = 0;
+        // for (let i=2; i<10000; i++) {
+        //     if (countPrime<number) {
+        //         for (let j=1; j<=i; j++) {
+        //             if (i%j===0) {
+        //                 countDivisor += 1;
+        //             }
+        //         }
+        //         if (countDivisor===2) {
+        //             document.write(i + " (số thứ " + (countPrime+1) + ")" + "<br>");
+        //             countPrime += 1;
+        //         }
+        //         countDivisor = 0;
+        //     }
+        //     else {
+        //         break;
+        //     }
+        // }
         let number = parseInt(prompt("Nhập n số nguyên tố đầu tiên: "));
         let countPrime = 0;
-        let countDivisor = 0;
-        for (let i=2; i<10000; i++) {
-            if (countPrime<number) {
-                for (let j=1; j<=i; j++) {
-                    if (i%j===0) {
-                        countDivisor += 1;
-                    }
+        let index = 2;
+        while (countPrime<number) {
+            let countDivisor = 0;
+            for (let i=1; i<=index; i++) {
+                if (index%i===0) {
+                    countDivisor++;
                 }
-                if (countDivisor===2) {
-                    document.write(i + " (số thứ " + (countPrime+1) + ")" + "<br>");
-                    countPrime += 1;
-                }
-                countDivisor = 0;
             }
-            else {
-                break;
+            if (countDivisor===2) {
+                document.write(index + "<br>");
+                countPrime++;
             }
+            index++;
         }
     </script>
 </body>
