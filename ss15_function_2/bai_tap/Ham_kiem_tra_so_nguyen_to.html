@@ -6,7 +6,7 @@
 </head>
 <body>
     <script>
-        function prime(number) {
+        function checkPrime(number) {
             let result;
             let divisor = 0;
             for (let i=1; i<=number; i++) {
@@ -23,7 +23,7 @@
             return result;
         }
         let number = parseInt(prompt("Nhập số tự nhiên cần kiểm tra: "));
-        alert(prime(number));
+        alert(checkPrime(number));
     </script>
 </body>
 </html>

@@ -7,7 +7,7 @@
 <body>
     <script>
         function checkNumber(character) {
-            if (parseFloat(character) || character==0) {
+            if (parseFloat(character)%parseFloat(character)===0 || parseFloat(character)===0) {
                 return true;
             }
             else {

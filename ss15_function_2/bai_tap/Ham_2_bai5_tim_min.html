@@ -6,16 +6,16 @@
 </head>
 <body>
     <script>
-        function minNumber(a, b, c) {
-            if (a<=b && a<=c) {
-                return a;
+        function minNumber(numberA, numberB, numberC) {
+            if (numberA<=numberB && numberA<=numberC) {
+                return numberA;
             }
             else
-                if (b<=c) {
-                    return b;
+                if (numberB<=numberC) {
+                    return numberB;
                 }
                 else {
-                    return c;
+                    return numberC;
                 }
         }
         let numberA = parseInt(prompt("Nhập số nguyên thứ nhất: "));
