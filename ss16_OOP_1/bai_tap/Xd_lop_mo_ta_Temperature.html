@@ -16,13 +16,13 @@
             getFahrenheit() {
                 return this.celsius*1.8+32;
             }
-            getKevin() {
+            getKelvin() {
                 return this.celsius+273;
             }
         }
         let celsius = new Temperature(0);
         celsius.setCelsius(25);
-        document.write("Fahrenheit: " + celsius.getFahrenheit() + "<br>" + "Kevin: " + celsius.getKevin());
+        document.write("Fahrenheit: " + celsius.getFahrenheit() + "<br>" + "Kelvin: " + celsius.getKelvin());
     </script>
 </body>
 </html>
