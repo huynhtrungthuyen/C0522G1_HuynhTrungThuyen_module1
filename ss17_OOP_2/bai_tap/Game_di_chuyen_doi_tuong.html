@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="game"></div>
+    <script>
+        class Naruto {
+            constructor(image, top, left, size) {
+                this.image = image;
+                this.top = top;
+                this.left = left;
+                this.size = size;
+            }
+            getNarutoElement() {
+                return '<img width="' + this.size + '"' +
+                    ' height="' + this.size + '"' +
+                    ' src="' + this.image + '"' +
+                    ' style="top: ' + this.top + 'px; left:' + this.left + 'px;position:absolute;" />';
+            }
+            moveRight() {
+                this.left += Math.random()*400-200;
+                console.log('ok: ' + this.left);
+            }
+        }
+        let naruto = new Naruto('naruto.jpg', 20, 30, 150);
+        function start(){
+            if(naruto.left < window.innerWidth - naruto.size){
+                naruto.moveRight();
+            }
+            document.getElementById('game').innerHTML = naruto.getNarutoElement();
+            setTimeout(start, 500)
+        }
+        start();
+    </script>
+</body>
+</html>
