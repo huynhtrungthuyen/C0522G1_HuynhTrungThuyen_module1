@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function checkArray(arrayA, arrayB) {
+            let arrayC = [];
+            for (let i=0; i<arrayB.length; i++) {
+                let count = 0;
+                for (let j=0; j<arrayA.length; j++) {
+                    if (arrayB[i] === arrayA[j]) {
+                        count++;
+                    }
+                }
+                if (count === 0) {
+                    arrayC.push(arrayB[i]);
+                    arrayC.push(i);          //chỉ số chẵn chứa phần tử có ở B, k có ở A, chỉ số lẻ chứa vị trí phần tử đứng trc ở mảng B.
+                }
+            }
+            let arrayD = [];
+            arrayD[0] = arrayC[0];
+            for (let i=0; i<arrayC.length; i+=2) {
+                if (arrayC[i+2]>arrayC[i] && arrayC[i+1]+1===arrayC[i+3]) {
+                    arrayD.push(arrayC[i+2]);
+                }
+                else
+                    if (arrayD.length>1) {
+                        return arrayD;
+                    }
+                    else {
+                        arrayD[0] = arrayC[i];
+                    }
+            }
+            return "Không tìm thấy!"
+        }
+        let arrayA = [7,2,5,3,5,3];
+        let arrayB = [7,2,5,4,6,8,3,5,3];
+        document.write("Kết quả: " +checkArray(arrayA, arrayB));
+    </script>
+</body>
+</html>
