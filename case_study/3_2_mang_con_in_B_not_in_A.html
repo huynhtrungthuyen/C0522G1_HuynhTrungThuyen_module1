@@ -31,14 +31,14 @@
                         return arrayD;
                     }
                     else {
-                        arrayD[0] = arrayC[i];
+                        arrayD[0] = arrayC[i+2];
                     }
             }
             return "Không tìm thấy!"
         }
         let arrayA = [7,2,5,3,5,3];
-        let arrayB = [7,2,5,4,6,8,3,5,3];
-        document.write("Kết quả: " +checkArray(arrayA, arrayB));
+        let arrayB = [7,2,5,4,4,3,6,8,5,3];
+        document.write("Kết quả: " + checkArray(arrayA, arrayB));
     </script>
 </body>
 </html>
