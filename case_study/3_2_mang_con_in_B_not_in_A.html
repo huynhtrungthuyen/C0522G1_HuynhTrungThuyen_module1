@@ -20,6 +20,7 @@
                     arrayC.push(i);          //chỉ số chẵn chứa phần tử có ở B, k có ở A, chỉ số lẻ chứa vị trí phần tử đứng trc ở mảng B.
                 }
             }
+
             let arrayD = [];
             arrayD[0] = arrayC[0];
             for (let i=0; i<arrayC.length; i+=2) {
@@ -27,17 +28,21 @@
                     arrayD.push(arrayC[i+2]);
                 }
                 else
-                    if (arrayD.length>1) {
-                        return arrayD;
+                    if (arrayC[i+2]<arrayC[i] && arrayC[i+1]+1===arrayC[i+3]) {
+                        arrayD.push(arrayC[i+2]);
                     }
-                    else {
-                        arrayD[0] = arrayC[i+2];
-                    }
+                    else
+                        if (arrayD.length>1) {
+                            return arrayD;
+                        }
+                        else {
+                            arrayD[0] = arrayC[i+2];
+                        }
             }
             return "Không tìm thấy!"
         }
         let arrayA = [7,2,5,3,5,3];
-        let arrayB = [7,2,5,4,4,3,6,8,5,3];
+        let arrayB = [7,2,5,4,4,1,1,0,3,6,8,5,3];
         document.write("Kết quả: " + checkArray(arrayA, arrayB));
     </script>
 </body>
