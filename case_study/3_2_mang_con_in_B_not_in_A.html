@@ -9,40 +9,38 @@
         function checkArray(arrayA, arrayB) {
             let arrayC = [];
             for (let i=0; i<arrayB.length; i++) {
-                let count = 0;
-                for (let j=0; j<arrayA.length; j++) {
-                    if (arrayB[i] === arrayA[j]) {
-                        count++;
-                    }
-                }
-                if (count === 0) {
+                if (arrayA.includes(arrayB[i])===false && arrayC.includes(arrayB[i])===false) {
                     arrayC.push(arrayB[i]);
-                    arrayC.push(i);          //chỉ số chẵn chứa phần tử có ở B, k có ở A, chỉ số lẻ chứa vị trí phần tử đứng trc ở mảng B.
                 }
             }
-
-            let arrayD = [];
-            arrayD[0] = arrayC[0];
-            for (let i=0; i<arrayC.length; i+=2) {
-                if (arrayC[i+2]>arrayC[i] && arrayC[i+1]+1===arrayC[i+3]) {
-                    arrayD.push(arrayC[i+2]);
-                }
-                else
-                    if (arrayC[i+2]<arrayC[i] && arrayC[i+1]+1===arrayC[i+3]) {
-                        arrayD.push(arrayC[i+2]);
+            for (let i=0; i<arrayC.length; i++) {
+                for (let j=0; j<=i; j++) {
+                    if (arrayC[i]<arrayC[j]) {
+                        let temp = arrayC[i];
+                        arrayC[i] = arrayC[j];
+                        arrayC[j] = temp;
                     }
-                    else
-                        if (arrayD.length>1) {
-                            return arrayD;
-                        }
-                        else {
-                            arrayD[0] = arrayC[i+2];
-                        }
+                }
             }
-            return "Không tìm thấy!"
+            if (arrayC.length>1) {
+                return arrayC;
+            }
+            else {
+                return "Không tìm thấy!"
+            }
         }
-        let arrayA = [7,2,5,3,5,3];
-        let arrayB = [7,2,5,4,4,1,1,0,3,6,8,5,3];
+        let numberA = parseInt(prompt("Nhập số phần tử của mảng A: "));
+        let arrayA = [];
+        for (let i=0;i<numberA; i++) {
+            arrayA[i] = parseInt(prompt("Nhập phần tử " + i));
+        }
+        let numberB = parseInt(prompt("Nhập số phần tử của mảng B: "));
+        let arrayB = [];
+        for (let i=0;i<numberB; i++) {
+            arrayB[i] = parseInt(prompt("Nhập phần tử " + i));
+        }
+        document.write("Mảng A: " + arrayA + "<br>");
+        document.write("Mảng B: " + arrayB + "<br>");
         document.write("Kết quả: " + checkArray(arrayA, arrayB));
     </script>
 </body>

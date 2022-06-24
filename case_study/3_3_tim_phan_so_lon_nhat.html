@@ -6,8 +6,13 @@
 </head>
 <body>
     <script>
-        let numerators = [3, 6, 9, 5, 7, 2];
-        let denominators = [4, 5, 8, 3, 8, 3];
+        let number = parseInt(prompt("Nhập số phần tử: "));
+        let numerators = [];
+        let denominators = [];
+        for (let i=0; i<number; i++) {
+            numerators[i] = parseInt(prompt("Nhập tử số: "));
+            denominators[i] = parseInt(prompt("Nhập mẫu số: "));
+        }
         let max = numerators[0]/denominators[0];
         let numerator = numerators[0];
         let denominator = denominators[0];
@@ -20,6 +25,8 @@
                 index = i;
             }
         }
+        document.write("Tử số: " + numerators + "<br>");
+        document.write("Mẫu số: " + denominators + "<br>");
         document.write(numerator + "/" + denominator + " là phân số lớn nhất, có chỉ số là " + index);
     </script>
 </body>

@@ -6,7 +6,10 @@
 </head>
 <body>
     <script>
-        let characters = prompt("Vui lòng nhập một ký tự trong bảng chữ cái tiếng Anh: ");
+        let characters;
+        do {
+            characters = prompt("Vui lòng nhập một ký tự trong bảng chữ cái tiếng Anh: ");
+        } while (characters.length!==1)
         switch (characters) {
             case "o":
             case "u":

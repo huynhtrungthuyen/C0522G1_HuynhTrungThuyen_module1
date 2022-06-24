@@ -7,7 +7,7 @@
 <body>
     <script>
         function differentSymbolsNaive(string) {
-            let array = [string[0]];
+            let array = [];
             for (let i=0; i<string.length; i++) {
                 let index = 0;
                 for (let j=0; j<array.length; j++) {
@@ -19,11 +19,12 @@
                     array.push(string[i]);
                 }
             }
-            return array.length;
+            return array;
         }
         let string = prompt("Nhập chuỗi bất kì: ");
         document.write("Chuỗi đã nhập: " + string + "<br>");
-        document.write("Số kí tự khác nhau trong chuỗi là " + differentSymbolsNaive(string));
+        document.write("Các kí tự khác nhau trong chuỗi: " + differentSymbolsNaive(string) + "<br>");
+        document.write("Số kí tự khác nhau trong chuỗi: " + differentSymbolsNaive(string).length);
     </script>
 </body>
 </html>
