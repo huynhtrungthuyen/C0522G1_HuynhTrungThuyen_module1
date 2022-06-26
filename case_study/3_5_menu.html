@@ -19,10 +19,12 @@
                 for (let i = 0; i < menu.length; i++) {
                     if (i === choose - 1) {
                         alert(menu[i] + ": " + price[i] + "(VND)");
-                        number = parseInt(prompt("Vui lòng nhập số lượng: "));
+                        do {
+                            number = parseInt(prompt("Vui lòng nhập số lượng: "));
+                        } while (!(number%1===0 && number>0))
                         alert(menu[i] + " x " + number + " = " + price[i] * number + " (VND)");
                         count++;
-                        document.write("Order lần " + count + ": " + menu[i] + " x " + number + " = " + price[i] * number + "(VND)" + "<br>");
+                        document.write("Order lần " + count + ": " + number + " x " + menu[i] + " = " + price[i] * number + "(VND)" + "<br>");
                         sum += price[i] * number;
                     }
                 }
