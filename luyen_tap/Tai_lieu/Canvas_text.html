@@ -2,9 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #c99090;"></canvas>
+<script>
+    let ctx = document.getElementById("myCanvas").getContext("2d");
+    ctx.font = "100px Arial";
+    ctx.fillStyle = "#b18645";
+    ctx.fillText("Mr. Thuyên", 100, 100, 200);    //có tô chữ
+    ctx.strokeText("Mr. Thuyên", 500, 100, 200);   //k tô chữ
+</script>
 </body>
 </html>

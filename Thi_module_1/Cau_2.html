@@ -2,9 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <script>
+        let number = parseInt(prompt("Nhập số phần tử của mảng: "));
+        let array = [];
+        for (let i=0; i<number; i++) {
+            array[i] = parseInt(prompt("Nhập array[" + i + "]: "));
+        }
+
+        function createArray(array) {
+            let max = array[0];
+            let min = array[0];
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] > max) {
+                    max = array[i];
+                }
+                if (array[i] < min) {
+                    min = array[i];
+                }
+            }
+            let arrayResult = [];
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] === min) {
+                    arrayResult.push(i);
+                    break;
+                }
+            }
+
+            for (let  j = 0; j < array.length; j++) {
+                if (array[j] === max) {
+                    arrayResult.push(j);
+                    break;
+                }
+            }
+            return arrayResult;
+        }
+
+
+        document.write("Mảng đã nhập: " + array + "<br>");
+        document.write("Kết quả: " + createArray(array));
+    </script>
 </body>
 </html>

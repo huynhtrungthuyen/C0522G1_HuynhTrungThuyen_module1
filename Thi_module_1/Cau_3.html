@@ -2,9 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <script>
+        let arrayLength = parseInt(prompt("Nhập số phần tử của mảng: "));
+        let array = [];
+        for (let i=0; i<arrayLength; i++) {
+            array[i] = parseInt(prompt("Nhập array[" + i + "]: "));
+        }
+        document.write("Mảng đã nhập: " + array + "<br>");
+        let number = parseInt(prompt("Nhập số nguyên bất kì: "));
+
+        function checkArray(array, number) {
+            let newArray = [];
+            for (let i=0; i<array.length; i++) {
+                if (newArray.includes(array[i])===false) {
+                    newArray.push(array[i]);
+                }
+            }
+            let resultArray = [];
+            for (let i=0; i<newArray.length; i++) {
+                if (newArray[i] % number === 0) {
+                    resultArray.push(newArray[i]);
+                }
+            }
+            return resultArray;
+        }
+        document.write("Các phần tử khác nhau trong mảng chia hết cho " + number + ": " + checkArray(array, number) + "<br>");
+        document.write("Số phần tử khác nhau trong mảng chia hết cho " + number + ": " + checkArray(array, number).length);
+    </script>
 </body>
 </html>

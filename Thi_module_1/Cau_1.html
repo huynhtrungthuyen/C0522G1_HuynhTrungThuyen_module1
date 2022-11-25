@@ -2,9 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let number;
+    do {
+        number = parseFloat(prompt("Nhập số nguyên lớn hơn 0: "));
+        if (!(number > 0 && number % 1 === 0)) {
+            alert("Nhập lại!");
+        }
+    } while (!(number > 0 && number % 1 === 0));
+
+    let arrayDivisor = [];
+    for (let i = 1; i <= number; i++) {
+        if (number % i === 0) {
+            arrayDivisor.push(i);
+        }
+    }
+    document.write("Các ước của " + number + " là : " + arrayDivisor);
+</script>
 </body>
 </html>

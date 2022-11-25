@@ -2,9 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #c99090;"></canvas>
+    <script>
+        let ctx = document.getElementById("myCanvas").getContext("2d");
+        ctx.beginPath();
+        ctx.arc(100,100,50,0,2*Math.PI);
+        // ctx.stroke();    //chỉ vẽ đường viền
+        ctx.fillStyle = "#FF0000";
+        ctx.fill();
+    </script>
 </body>
 </html>

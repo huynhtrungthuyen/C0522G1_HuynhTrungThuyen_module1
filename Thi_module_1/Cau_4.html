@@ -63,12 +63,13 @@
             }
         }
     }
-    array = sortArray;
+
     function display(array) {
         let sout = "<table border='1'>";
         sout += "<tr>";
         sout += "<th>STT</th>";
         sout += "<th>Họ và tên</th>";
+        sout += "<th>Tuổi</th>";
         sout += "<th>Địa chỉ</th>";
         sout += "<th>Số điện thoại</th>";
         sout += "</tr>";
@@ -84,7 +85,7 @@
         sout += "</table>";
         document.getElementById("display").innerHTML = sout;
     }
-    display(array);
+    display(sortArray);
 
 </script>
 </body>

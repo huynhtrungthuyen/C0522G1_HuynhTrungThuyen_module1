@@ -5,18 +5,18 @@
     <title>Bảng cửu chương</title>
 </head>
 <body>
-    <h2>BẢNG CỬU CHƯƠNG</h2>
-    <script>
-        let multiplicationTable = "<table border='1' width='80%' cellspacing='1' cellpadding='3'>";
-        for (i = 1; i < 10; i++) {
-            multiplicationTable = multiplicationTable + "<tr>";
-            for (j = 2; j < 10; j++) {
-                multiplicationTable = multiplicationTable + "<td>" + j + "x" + i + "=" + i*j + "</td>";
-            }
-            multiplicationTable = multiplicationTable + "</tr>";
+<h2>BẢNG CỬU CHƯƠNG</h2>
+<script>
+    let multiplicationTable = "<table border='1' width='80%' cellspacing='1' cellpadding='3'>";
+    for (i = 1; i < 10; i++) {
+        multiplicationTable = multiplicationTable + "<tr>";
+        for (j = 2; j < 10; j++) {
+            multiplicationTable = multiplicationTable + "<td>" + j + "x" + i + "=" + i * j + "</td>";
         }
-        multiplicationTable = multiplicationTable + "</table>";
-        document.write(multiplicationTable);
-    </script>
+        multiplicationTable = multiplicationTable + "</tr>";
+    }
+    multiplicationTable = multiplicationTable + "</table>";
+    document.write(multiplicationTable);
+</script>
 </body>
 </html>

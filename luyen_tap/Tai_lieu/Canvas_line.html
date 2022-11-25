@@ -2,9 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #c99090;"></canvas>
+<script>
+    let ctx = document.getElementById("myCanvas").getContext("2d");
+    ctx.moveTo(100,100);   //tọa độ
+    ctx.lineTo(200,200);    //rộng, cao
+    ctx.stroke();
+</script>
 </body>
 </html>
