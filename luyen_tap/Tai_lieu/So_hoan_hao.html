@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkNumber(number) {
+        let count = 0;  //biến đếm số lượng số hoàn hảo, điều kiện là count < number đúng k?
+        let index = 1;    //index mới là các số cần kiểm tra có phải là số hoàn hảo k, number chỉ là số lượng.
+        let array = [];   //khai báo cái mảng chứa các số hoàn hảo.
+        while (count < number - 1) {      // vì đề "số lượng số hoàn hỏa nhỏ hơn số nhập vào", nên count tới number-1 sẽ dừng vòng lặp
+            let sum = 0;           //sum là tổng các ước của các số hoàn hảo,
+            for (let i = 1; i <= index / 2; i++) {
+                if (index % i === 0) {
+                    sum += i;
+                }
+            }                             // cái for chỉ để kiểm tra coi index có phải số hoàn hảo k
+            if (sum === index) {
+                array.push(index);         // đúng thì xuất ra, tăng count lên
+                count++;
+            }
+            index++;         //rồi kiểm tra các số index tiếp theo, miễn cai count = number-1 thì thôi
+        }
+        return array;
+    }
+
+    let number = 5;
+    document.write(checkNumber(number));
+</script>
+</body>
+</html>

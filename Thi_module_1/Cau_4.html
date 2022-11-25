@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Danh sách bệnh nhân</h1>
+<div id="display"></div>
+<script>
+    class People {
+        constructor(name, age, address, phone) {
+            this.name = name;
+            this.age = age;
+            this.address = address;
+            this.phone = phone;
+        }
+        getName() {
+            return this.name;
+        }
+        setName(value) {
+            this.name = value;
+        }
+        getAge() {
+            return this.age;
+        }
+        setAge(value) {
+            this.age = value;
+        }
+        getAddress() {
+            return this.address;
+        }
+        setAddress(value) {
+            this.address = value;
+        }
+        getPhone() {
+            return this.phone;
+        }
+        setPhone(value) {
+            this.phone = value;
+        }
+    }
+
+    let people1 = new People("Nguyễn Lê Hoàng Oanh",20,"Quảng Nam","0923434564");
+    let people2 = new People("Nguyễn Trần Cảnh",30,"Quảng Nam","0943246324");
+    let people3 = new People("Hoàng Thanh Hùng",15,"Quảng Nam","0123451235");
+    let people4 = new People("Trần Lệ Quyên",19,"Quảng Nam","0923093748");
+    let array = [people1, people2, people3, people4];
+    let newArray = [people1.getName(), people2.getName(), people3.getName(), people4.getName()];
+    newArray.sort();
+    let sortArray = [];
+    for (let i=0; i<array.length; i++) {
+        for (let j=0; j<newArray.length; j++) {
+            if (array[i].getName() === newArray[j]) {
+                sortArray[j] = array[i];
+            }
+        }
+    }
+    array = sortArray;
+    function display(array) {
+        let sout = "<table border='1'>";
+        sout += "<tr>";
+        sout += "<th>STT</th>";
+        sout += "<th>Họ và tên</th>";
+        sout += "<th>Địa chỉ</th>";
+        sout += "<th>Số điện thoại</th>";
+        sout += "</tr>";
+        for (let i = 0; i < array.length ; i++) {
+            sout += "<tr>";
+            sout += "<td>"+(i+1) +"</td>";
+            sout += "<td>"+array[i].getName() +"</td>";
+            sout += "<td>"+array[i].getAge() +"</td>";
+            sout += "<td>"+array[i].getAddress() +"</td>";
+            sout += "<td>"+array[i].getPhone() +"</td>";
+            sout += "</tr>";
+        }
+        sout += "</table>";
+        document.getElementById("display").innerHTML = sout;
+    }
+    display(array);
+
+</script>
+</body>
+</html>
+</body>
+</html>
